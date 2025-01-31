@@ -1,0 +1,32 @@
+{
+	"credit": "Made with Blockbench by TfLeon",
+	"textures": {
+		"3": "opensignals:blocks/hvks_tfleon/hvks_default/zs6_schirm",
+		"zsschirm": "opensignals:blocks/hvks_tfleon/hvks_zs/zs6",
+		"particle": "opensignals:blocks/hvks_tfleon/hvks_default/signalschirm"
+	},
+	"elements": [
+		{
+			"from": [4.5, 6, 7],
+			"to": [11.5, 14, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 6, 1]},
+			"faces": {
+				"north": {"uv": [0, 0, 7, 8], "texture": "#3"},
+				"east": {"uv": [0, 8, 1, 16], "texture": "#3"},
+				"south": {"uv": [7, 0, 14, 8], "texture": "#3"},
+				"west": {"uv": [1, 8, 2, 16], "texture": "#3"},
+				"up": {"uv": [9, 9, 2, 8], "texture": "#3"},
+				"down": {"uv": [9, 9, 2, 10], "texture": "#3"}
+			}
+		},
+		{
+			"name": "zs3",
+			"from": [6, 7.5, 6.95],
+			"to": [10, 12.5, 6.95],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 8, 7]},
+			"faces": {
+				"north": {"uv": [0, 0, 8, 10], "texture": "#zsschirm"}
+			}
+		}
+	]
+}

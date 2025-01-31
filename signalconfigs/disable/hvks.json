@@ -1,0 +1,11 @@
+{
+    "currentSignals": ["hvks", "hvksbrg"],
+    "values": {
+        "true": ["HVKS_MAIN.HP0","HVKS_ZS1.FALSE","HVKS_ZS7.FALSE", "HVKS_IDENTIFIER.FALSE", "HVKS_SH1.FALSE", "HVKS_ZS8.FALSE", 
+                "hvks_zs_oben_zs3.OFF", "hvks_zs_oben_zs3_6.OFF", "hvks_zs_oben_zs2.OFF", "hvks_zs_oben_zs2_6.OFF", "hvks_zs_oben_zs6.OFF", "hvks_zs_oben_zp9.OFF", "hvks_zs_oben_zs3v.OFF", "hvks_zs_oben_zs2v.OFF",
+                "hvks_zs_unten_zs3.OFF", "hvks_zs_unten_zs3_6.OFF", "hvks_zs_unten_zs2.OFF", "hvks_zs_unten_zs2_6.OFF", "hvks_zs_unten_zs6.OFF", "hvks_zs_unten_zp9.OFF", "hvks_zs_unten_zs3v.OFF", "hvks_zs_unten_zs2v.OFF",
+                "hvks_zs_2_zs3.OFF", "hvks_zs_2_zs3_6.OFF", "hvks_zs_2_zs2.OFF", "hvks_zs_2_zs2_6.OFF", "hvks_zs_2_zs6.OFF", "hvks_zs_2_zp9.OFF", "hvks_zs_2_zs3v.OFF", "hvks_zs_2_zs2v.OFF",
+                "hvks_zs_3_zs3.OFF", "hvks_zs_3_zs3_6.OFF", "hvks_zs_3_zs2.OFF", "hvks_zs_3_zs2_6.OFF", "hvks_zs_3_zs6.OFF", "hvks_zs_3_zp9.OFF", "hvks_zs_3_zs3v.OFF", "hvks_zs_3_zs2v.OFF"],
+        "!config(HVKS_MAINB.NONE)": ["HVKS_DISTANT.OFF"]
+    }
+}

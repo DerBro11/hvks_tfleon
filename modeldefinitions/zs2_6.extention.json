@@ -1,0 +1,33 @@
+{
+    "extention": {
+        "OFF": "opensignals:blocks/hvks_tfleon/hvks_lamps/lamp_off",
+        "A": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_a",
+        "B": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_b",
+        "C": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_c",
+        "D": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_d",
+        "E": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_e",
+        "F": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_f",
+        "G": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_g",
+        "H": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_h",
+        "I": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_i",
+        "J": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_j",
+        "K": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_k",
+        "L": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_l",
+        "M": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_m",
+        "N": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_n",
+        "O": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_o",
+        "P": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_p",
+        "Q": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_q",
+        "R": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_r",
+        "S": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_s",
+        "T": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_t",
+        "U": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_u",
+        "V": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_v",
+        "W": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_w",
+        "X": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_x",
+        "Y": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_y",
+        "Z": "opensignals:blocks/hvks_tfleon/hvks_zs/zs2_z",
+        "ZS6": "opensignals:blocks/hvks_tfleon/hvks_zs/zs6",
+        "ZS8": "opensignals:blocks/hvks_tfleon/hvks_zs/zs8"
+    }
+}

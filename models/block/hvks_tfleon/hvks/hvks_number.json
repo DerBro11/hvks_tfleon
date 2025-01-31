@@ -1,0 +1,21 @@
+{
+	"credit": "Made with Blockbench by Tfleon",
+	"textures": {
+		"3": "opensignals:blocks/hvks_tfleon/hvks_default/number_schirm"
+	},
+	"elements": [
+		{
+			"from": [5.5, 9, 7],
+			"to": [10.5, 14, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-1, 6, 2]},
+			"faces": {
+				"north": {"uv": [0, 0, 7, 8], "texture": "#3"},
+				"east": {"uv": [0, 8, 1, 16], "texture": "#3"},
+				"south": {"uv": [7, 0, 14, 8], "texture": "#3"},
+				"west": {"uv": [1, 8, 2, 16], "texture": "#3"},
+				"up": {"uv": [9, 9, 2, 8], "texture": "#3"},
+				"down": {"uv": [9, 9, 2, 10], "texture": "#3"}
+			}
+		}
+	]
+}

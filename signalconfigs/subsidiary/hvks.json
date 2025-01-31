@@ -1,0 +1,23 @@
+{
+    "currentSignal": "hvks",
+    "allStates": {
+        "ZS1": [
+            "HVKS_ZS1.TRUE"
+        ],
+        "ZS7": [
+            "HVKS_ZS7.TRUE"
+        ],
+        "SH1": [
+            "HVKS_SH1.TRUE"
+        ],
+        "ZS8": [
+            "HVKS_ZS8.TRUE"
+        ],
+        "STATUSLIGHT": [
+            "HVKS_MAIN.OFF",
+            "HVKS_IDENTIFIER.TRUE",
+            "HVKS_DISTANT_IDENTIFIER.TRUE",
+            "HVKS_DISTANT.OFF"
+        ]
+    }
+}

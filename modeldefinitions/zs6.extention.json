@@ -1,0 +1,7 @@
+{
+    "extention": {
+        "OFF": "opensignals:blocks/hvks_tfleon/hvks_lamps/lamp_off",
+        "ZS6": "opensignals:blocks/hvks_tfleon/hvks_zs/zs6",
+        "ZS8": "opensignals:blocks/hvks_tfleon/hvks_zs/zs8"
+    }
+}

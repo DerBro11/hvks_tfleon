@@ -1,0 +1,417 @@
+{
+    "systemProperties": {
+        "placementToolName": "placementtool",
+        "canLink": "true",
+        "isBridgeSignal": false,
+        "defaultHeight": "6",
+        "customNameRenderHeight": "2.55",
+	    "colors": [
+            16777215,
+            16761344
+        ]
+     },
+     "seProperties": [
+        {
+             "name": "hvks_mainb",
+             "enumClass": "hvksmain_b",
+             "defaultState": "NONE",
+             "changeableStage": "GUISTAGE"
+        },
+        {
+            "name": "hvks_distantb",
+            "enumClass": "hvksdistant_b",
+            "defaultState": "NONE",
+            "changeableStage": "GUISTAGE",
+	        "autoname": true
+        },
+        {
+            "name": "hvks_mastsign",
+            "enumClass": "hvksmastsign_b",
+            "defaultState": "NONE",
+            "changeableStage": "GUISTAGE",
+	        "autoname": true
+        },
+        {
+            "name": "hvks_replacement_signal",
+            "enumClass": "hvksreplacementsignal_b",
+            "defaultState": "NONE",
+            "changeableStage": "GUISTAGE",
+	        "autoname": false,
+            "dependencies": "!config(HVKS_MAINB.NONE)"
+        },
+        {
+            "name": "hvks_sh1",
+            "defaultState": false,
+            "changeableStage": "APISTAGE",
+            "dependencies": "!config(HVKS_MAINB.NONE)"
+        },
+        {
+            "name": "hvks_zs1",
+            "defaultState": false,
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+            "dependencies": "(config(HVKS_REPLACEMENT_SIGNAL.ZS1) || config(HVKS_REPLACEMENT_SIGNAL.ZS1_IDENT))"
+        },
+        {
+            "name": "hvks_zs8_as_zs1",
+            "defaultState": false,
+            "changeableStage": "GUISTAGE",
+            "dependencies": "(config(HVKS_REPLACEMENT_SIGNAL.ZS1) || config(HVKS_REPLACEMENT_SIGNAL.ZS1_IDENT))"
+        },
+        {
+            "name": "hvks_zs7",
+            "defaultState": false,
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+            "dependencies": "config(HVKS_REPLACEMENT_SIGNAL.ZS7)"
+        },
+        {
+            "name": "hvks_identifier",
+            "defaultState": false,
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+            "dependencies": "(config(HVKS_REPLACEMENT_SIGNAL.ZS1_IDENT) || config(HVKS_REPLACEMENT_SIGNAL.IDENT))"
+        },
+        {
+            "name": "hvks_ne2",
+            "defaultState": false,
+            "changeableStage": "GUISTAGE",
+            "dependencies": "!config(HVKS_DISTANTB.NONE) && config(HVKS_MAINB.NONE)"
+        },
+        {
+            "name": "hvks_distant_identifier",
+            "defaultState": false,
+            "changeableStage": "APISTAGE",
+            "dependencies": "!config(HVKS_DISTANTB.NONE)"
+        },
+	    {
+            "name": "hvks_main",
+            "enumClass": "hvksmain",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "!config(HVKS_MAINB.NONE)"
+        },
+        {
+            "name": "hvks_distant",
+            "enumClass": "hvksdistant",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "!config(HVKS_DISTANTB.NONE)"
+        },
+
+        {
+            "name": "hvks_zs_oben_b",
+            "enumClass": "hvkszs_b_o",
+            "defaultState": "OFF",
+            "changeableStage": "GUISTAGE",
+	        "autoname": false,
+            "dependencies": "!config(HVKS_MAINB.NONE)"
+        },
+        {
+            "name": "hvks_zs_oben_zs3_f",
+            "enumClass": "hvkszs3",
+            "defaultState": "OFF",
+            "changeableStage": "GUISTAGE",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_OBEN_B.F_ZS3)"
+        },
+        {
+            "name": "hvks_zs_oben_zs3",
+            "enumClass": "hvkszs3",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_OBEN_B.L_ZS3)"
+        },
+        {
+            "name": "hvks_zs_oben_zs3_6",
+            "enumClass": "hvkszs36",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_OBEN_B.L_ZS3_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_oben_zs2",
+            "enumClass": "hvkszs2",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_OBEN_B.L_ZS2)"
+        },
+        {
+            "name": "hvks_zs_oben_zs2_6",
+            "enumClass": "hvkszs26",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_OBEN_B.L_ZS2_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_oben_zs6",
+            "enumClass": "hvkszs6",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_OBEN_B.L_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_oben_zp9",
+            "enumClass": "hvkszp9",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_OBEN_B.L_ZP9_10)"
+        },
+        {
+            "name": "hvks_zs_oben_zs3v",
+            "enumClass": "hvkszs3",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_OBEN_B.L_ZS3V)"
+        },
+        {
+            "name": "hvks_zs_oben_zs2v",
+            "enumClass": "hvkszs2v",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_OBEN_B.L_ZS2V)"
+        },
+
+        {
+            "name": "hvks_zs_unten_b",
+            "enumClass": "hvkszs_b_u",
+            "defaultState": "OFF",
+            "changeableStage": "GUISTAGE",
+	        "autoname": false
+        },
+        {
+            "name": "hvks_zs_unten_zs3v_f",
+            "enumClass": "hvkszs3",
+            "defaultState": "OFF",
+            "changeableStage": "GUISTAGE",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_UNTEN_B.F_ZS3V)"
+        },
+        {
+            "name": "hvks_zs_unten_zs3",
+            "enumClass": "hvkszs3",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_UNTEN_B.L_ZS3)"
+        },
+        {
+            "name": "hvks_zs_unten_zs3_6",
+            "enumClass": "hvkszs36",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_UNTEN_B.L_ZS3_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_unten_zs2",
+            "enumClass": "hvkszs2",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_UNTEN_B.L_ZS2)"
+        },
+        {
+            "name": "hvks_zs_unten_zs2_6",
+            "enumClass": "hvkszs26",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_UNTEN_B.L_ZS2_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_unten_zs6",
+            "enumClass": "hvkszs6",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_UNTEN_B.L_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_unten_zp9",
+            "enumClass": "hvkszp9",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_UNTEN_B.L_ZP9_10)"
+        },
+        {
+            "name": "hvks_zs_unten_zs3v",
+            "enumClass": "hvkszs3",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_UNTEN_B.L_ZS3V)"
+        },
+        {
+            "name": "hvks_zs_unten_zs2v",
+            "enumClass": "hvkszs2v",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_UNTEN_B.L_ZS2V)"
+        },
+
+
+
+        {
+            "name": "hvks_zs_2_b",
+            "enumClass": "hvkszs_b_2",
+            "defaultState": "OFF",
+            "changeableStage": "GUISTAGE",
+	        "autoname": false
+        },
+        {
+            "name": "hvks_zs_2_zs3",
+            "enumClass": "hvkszs3",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_2_B.L_ZS3)"
+        },
+        {
+            "name": "hvks_zs_2_zs3_6",
+            "enumClass": "hvkszs36",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_2_B.L_ZS3_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_2_zs2",
+            "enumClass": "hvkszs2",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_2_B.L_ZS2)"
+        },
+        {
+            "name": "hvks_zs_2_zs2_6",
+            "enumClass": "hvkszs26",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_2_B.L_ZS2_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_2_zs6",
+            "enumClass": "hvkszs6",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_2_B.L_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_2_zp9",
+            "enumClass": "hvkszp9",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_2_B.L_ZP9_10)"
+        },
+        {
+            "name": "hvks_zs_2_zs3v",
+            "enumClass": "hvkszs3",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_2_B.L_ZS3V)"
+        },
+        {
+            "name": "hvks_zs_2_zs2v",
+            "enumClass": "hvkszs2v",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_2_B.L_ZS2V)"
+        },
+
+
+
+        {
+            "name": "hvks_zs_3_b",
+            "enumClass": "hvkszs_b_3",
+            "defaultState": "OFF",
+            "changeableStage": "GUISTAGE",
+	        "autoname": false,
+            "dependencies": "config(HVKS_DISTANTB.NONE)"
+        },
+        {
+            "name": "hvks_zs_3_zs3",
+            "enumClass": "hvkszs3",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_3_B.L_ZS3)"
+        },
+        {
+            "name": "hvks_zs_3_zs3_6",
+            "enumClass": "hvkszs36",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_3_B.L_ZS3_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_3_zs2",
+            "enumClass": "hvkszs2",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_3_B.L_ZS2)"
+        },
+        {
+            "name": "hvks_zs_3_zs2_6",
+            "enumClass": "hvkszs26",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_3_B.L_ZS2_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_3_zs6",
+            "enumClass": "hvkszs6",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_3_B.L_ZS6_8)"
+        },
+        {
+            "name": "hvks_zs_3_zp9",
+            "enumClass": "hvkszp9",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": false,
+            "dependencies": "config(HVKS_ZS_3_B.L_ZP9_10)"
+        },
+        {
+            "name": "hvks_zs_3_zs3v",
+            "enumClass": "hvkszs3",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_3_B.L_ZS3V)"
+        },
+        {
+            "name": "hvks_zs_3_zs2v",
+            "enumClass": "hvkszs2v",
+            "defaultState": "OFF",
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+	        "autoname": true,
+            "dependencies": "config(HVKS_ZS_3_B.L_ZS2V)"
+        },
+        {
+            "name": "hvks_zs8",
+            "defaultState": false,
+            "changeableStage": "APISTAGE_NONE_CONFIG",
+            "dependencies": "(config(HVKS_ZS8_AS_ZS1.TRUE) || config(HVKS_ZS_OBEN_B.L_ZS3_ZS6_8) ||  config(HVKS_ZS_OBEN_B.L_ZS2_ZS6_8) || config(HVKS_ZS_OBEN_B.L_ZS6_8) || config(HVKS_ZS_UNTEN_B.L_ZS3_ZS6_8) ||  config(HVKS_ZS_UNTEN_B.L_ZS2_ZS6_8) || config(HVKS_ZS_UNTEN_B.L_ZS6_8) || config(HVKS_ZS_2_B.L_ZS3_ZS6_8) ||  config(HVKS_ZS_2_B.L_ZS2_ZS6_8) || config(HVKS_ZS_2_B.L_ZS6_8) || config(HVKS_ZS_3_B.L_ZS3_ZS6_8) ||  config(HVKS_ZS_3_B.L_ZS2_ZS6_8) || config(HVKS_ZS_3_B.L_ZS6_8))"
+        }
+    ]
+}

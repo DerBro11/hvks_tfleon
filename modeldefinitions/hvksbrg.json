@@ -1,0 +1,752 @@
+{
+    "textures": {
+        "lamp_green_hvks": "opensignals:blocks/hvks_tfleon/hvks_lamps/lamp_green",
+	    "lamp_red_hvks": "opensignals:blocks/hvks_tfleon/hvks_lamps/lamp_red",
+        "lamp_yellow_hvks": "opensignals:blocks/hvks_tfleon/hvks_lamps/lamp_yellow",
+        "lamp_white_hvks": "opensignals:blocks/hvks_tfleon/hvks_lamps/lamp_white",
+        "lamp_white_blink_hvks": "opensignals:blocks/hvks_tfleon/hvks_lamps/lamp_white_blink",
+        "zs8": "opensignals:blocks/hvks_tfleon/hvks_zs/zs8"
+    },
+    "models": {
+        "hvks_tfleon/hvks/hvks_bridge_mast_down": {
+			"textures": [
+				{}
+			],
+			"y": 0
+		},
+		"hvks_tfleon/hvks/hvks_bridge_mast": {
+			"textures": [
+				{
+					"y": 0
+				},
+				{
+					"y": 1
+				},
+				{
+					"y": 2
+				},
+                {
+					"y": 3
+				}
+			],
+			"y": 1
+		},
+        "hvks_tfleon/hvks/hvks_hsig_brg": {
+            "textures": [
+                {
+                    "blockstate": "with(HVKS_MAIN.OFF) && !with(HVKS_MAINB.NONE)",
+                    "y": 2.4
+                },
+                {
+                    "blockstate": "(with(HVKS_MAIN.HP1) || with(HVKS_MAIN.HP2)) && !with(HVKS_MAINB.NONE)",
+                    "retexture": {
+                        "lamp_greennorth": "lamp_green_hvks"
+                    },
+                    "y": 2.4
+                },
+                {
+                    "blockstate": "with(HVKS_MAIN.HP0) && !with(HVKS_MAINB.NONE)",
+                    "retexture": {
+                        "lamp_rednorth": "lamp_red_hvks"
+                    },
+                    "y": 2.4
+                }
+            ]   
+        },
+        "hvks_tfleon/hvks/hvks_alt_red": {
+            "textures": [
+                {
+                    "blockstate": "(!with(HVKS_MAIN.HP0) || hasandis(HVKS_SH1)) && (with(HVKS_MAINB.ALT_RED) || with(HVKS_MAINB.ALT_RED_HP2))",
+                    "y": 2.4
+                },
+                {
+                    "blockstate": "with(HVKS_MAIN.HP0) && hasandisnot(HVKS_SH1) && (with(HVKS_MAINB.ALT_RED) || with(HVKS_MAINB.ALT_RED_HP2))",
+                    "retexture": {
+                        "lamp_rednorth": "lamp_red_hvks"
+                    },
+                    "y": 2.4
+                }
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_lamp_hp2": {
+            "textures": [
+                {
+                    "blockstate": "!with(HVKS_MAIN.HP2) && (with(HVKS_MAINB.HP2) || with(HVKS_MAINB.ALT_RED_HP2))",
+                    "y": 2.4
+                },
+                {
+                    "blockstate": "with(HVKS_MAIN.HP2) && (with(HVKS_MAINB.HP2) || with(HVKS_MAINB.ALT_RED_HP2))",
+                    "retexture": {
+                        "lamp_yellownorth": "lamp_yellow_hvks"
+                    },
+                    "y": 2.4
+                }
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_zs1": {
+            "textures": [
+                {
+					"blockstate": "(with(hvks_replacement_signal.ZS1) || with(hvks_replacement_signal.ZS1_IDENT)) && !with(HVKS_MAINB.NONE) && hasandisnot(HVKS_ZS1) && (hasandisnot(HVKS_ZS8) || hasandisnot(HVKS_ZS8_AS_ZS1))",
+                    "y": 2.4
+				},
+				{
+					"blockstate": "(with(hvks_replacement_signal.ZS1) || with(hvks_replacement_signal.ZS1_IDENT)) && !with(HVKS_MAINB.NONE) && hasandis(HVKS_ZS1)",
+                    "retexture": {
+						"lamp_whitenorth": "lamp_white_hvks"
+					},
+                    "y": 2.4
+                },
+                {
+					"blockstate": "(with(hvks_replacement_signal.ZS1) || with(hvks_replacement_signal.ZS1_IDENT)) && !with(HVKS_MAINB.NONE) && hasandis(HVKS_ZS8_AS_ZS1) && hasandis(HVKS_ZS8)",
+                    "retexture": {
+						"lamp_whitenorth": "lamp_white_blink_hvks"
+					},
+                    "y": 2.4
+				}
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_zs7": {
+            "textures": [
+                {
+					"blockstate": "with(hvks_replacement_signal.ZS7) && !with(HVKS_MAINB.NONE) && hasandisnot(HVKS_ZS7)",
+                    "y": 2.4
+				},
+				{
+					"blockstate": "with(hvks_replacement_signal.ZS7) && !with(HVKS_MAINB.NONE) && hasandis(HVKS_ZS7)",
+                    "retexture": {
+						"lamp_yellownorth": "lamp_yellow_hvks"
+					},
+                    "y": 2.4
+                }
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_sh1": {
+            "textures": [
+                {
+					"blockstate": "!with(HVKS_MAINB.NONE) && hasandisnot(HVKS_SH1)",
+                    "y": 2.4
+				},
+				{
+					"blockstate": "!with(HVKS_MAINB.NONE) && hasandis(HVKS_SH1)",
+                    "retexture": {
+						"lamp_whitenorth": "lamp_white_hvks"
+					},
+                    "y": 2.4
+				}
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_identifier": {
+            "textures": [
+                {
+					"blockstate": "(with(hvks_replacement_signal.ZS1_IDENT) || with(hvks_replacement_signal.IDENT)) && !with(HVKS_MAINB.NONE) && hasandisnot(HVKS_IDENTIFIER)",
+                    "y": 2.4
+				},
+				{
+					"blockstate": "(with(hvks_replacement_signal.ZS1_IDENT) || with(hvks_replacement_signal.IDENT)) && !with(HVKS_MAINB.NONE) && hasandis(HVKS_IDENTIFIER)",
+                    "retexture": {
+						"lamp_whitenorth": "lamp_white_hvks"
+					},
+                    "y": 2.4
+				}
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_vsig_brg": {
+            "textures": [
+                {
+                    "blockstate": "(with(HVKS_DISTANT.OFF) || (with(HVKS_DISTANT.VR1) && with(HVKS_DISTANTB.VR1))) && !with(HVKS_DISTANTB.NONE) && !with(HVKS_MAINB.NONE)"
+                },
+                {
+                    "blockstate": "(with(HVKS_DISTANT.VR0) || with(HVKS_DISTANT.VR1) || with(HVKS_DISTANT.VR2)) && with(HVKS_DISTANTB.VR0) && !with(HVKS_MAINB.NONE)",
+                    "retexture": {
+                        "lamp_vr0": "lamp_yellow_hvks",
+                        "lamp_vr2": "lamp_yellow_hvks"
+                    }
+                },
+                {
+                    "blockstate": "with(HVKS_DISTANT.VR2) && (with(HVKS_DISTANTB.VR1) || with(HVKS_DISTANTB.VR2)) && !with(HVKS_MAINB.NONE)",
+                    "retexture": {
+                        "lamp_vr2": "lamp_yellow_hvks"
+                    }
+                },
+                {
+                    "blockstate": "with(HVKS_DISTANT.VR0) && (with(HVKS_DISTANTB.VR2) || with(HVKS_DISTANTB.VR1)) && !with(HVKS_MAINB.NONE)",
+                    "retexture": {
+                        "lamp_vr0": "lamp_yellow_hvks",
+                        "lamp_vr2": "lamp_yellow_hvks"
+                    }
+                },
+                {
+                    "blockstate": "(with(HVKS_DISTANT.VR1) || with(HVKS_DISTANT.VR2)) && with(HVKS_DISTANTB.VR2) && !with(HVKS_MAINB.NONE)",
+                    "retexture": {
+                        "lamp_vr2": "lamp_yellow_hvks"
+                    }
+                }
+            ],
+            "y": 1
+        },
+        "hvks_tfleon/hvks/hvks_vr1": {
+            "textures": [
+                {
+                    "blockstate": "(with(HVKS_DISTANT.OFF) || with(HVKS_DISTANT.VR0)) && with(HVKS_DISTANTB.VR1)"
+                },
+                {
+                    "blockstate": "with(HVKS_DISTANT.VR1) && with(HVKS_DISTANTB.VR1)",
+                    "retexture": {
+                        "lamp_vr1": "lamp_green_hvks",
+                        "lamp_vr2": "lamp_green_hvks"
+                    }
+                },
+                {
+                    "blockstate": "with(HVKS_DISTANT.VR2) && with(HVKS_DISTANTB.VR1)",
+                    "retexture": {
+                        "lamp_vr2": "lamp_green_hvks"
+                    }
+                }
+            ],
+            "y": 1
+        },
+        "hvks_tfleon/hvks/hvks_vr2": {
+            "textures": [
+                {
+                    "blockstate": "(with(HVKS_DISTANT.VR0) || with(HVKS_DISTANT.OFF)) && with(HVKS_DISTANTB.VR2)"
+                },
+                {
+                    "blockstate": "with(HVKS_DISTANT.VR2) && with(HVKS_DISTANTB.VR2)",
+                    "retexture": {
+                        "lamp_greennorth": "lamp_green_hvks"
+                    }
+                },
+                {
+                    "blockstate": "with(HVKS_DISTANT.VR1) && with(HVKS_DISTANTB.VR2)",
+                    "retexture": {
+                        "lamp_greennorth": "lamp_green_hvks"
+                    }
+                }
+            ],
+            "y": 1
+        },
+        "hvks_tfleon/hvks/hvks_vrstatuslight": {
+            "textures": [
+                {
+                    "blockstate": "hasandisnot(HVKS_DISTANT_IDENTIFIER) && !with(HVKS_DISTANTB.NONE)"
+                },
+                {
+                    "blockstate": "hasandis(HVKS_DISTANT_IDENTIFIER) && !with(HVKS_DISTANTB.NONE)",
+                    "retexture": {
+                        "lamp_whitenorth": "lamp_white_hvks"
+                    }
+                }
+            ],
+            "y": 1
+        },
+        "hvks_tfleon/hvks/hvks_ne2": {
+            "textures": [
+                {
+                    "blockstate": "hasandis(HVKS_NE2) && !with(HVKS_DISTANTB.NONE) && with(HVKS_MAINB.NONE)"
+                }
+            ],
+            "y": 2
+        },
+        "hvks_tfleon/hvks/hvks_mastsign": {
+            "textures": [
+                {
+                    "blockstate": "with(HVKS_MASTSIGN.WRW)"
+                },
+                {
+                    "blockstate": "with(HVKS_MASTSIGN.WGWGW)",
+                    "retexture": {
+                        "0": "opensignals:blocks/hvks_tfleon/mastsign/wgwgw"
+                    }
+                },
+                {
+                    "blockstate": "with(HVKS_MASTSIGN.WSWSW)",
+                    "retexture": {
+                        "0": "opensignals:blocks/hvks_tfleon/mastsign/wswsw"
+                    }
+                }
+            ],
+            "x": 0.45,
+            "y": 2.4
+        },
+        "hvks_tfleon/hvks/hvks_number": {
+            "textures": [
+                {
+					"blockstate": "hasandis(CUSTOMNAME) && !with(HVKS_MAINB.NONE)"
+				}
+            ],
+            "y": -0.5,
+            "z": -1
+        },
+
+        "hvks_tfleon/hvks/hvks_zs_form_oben_zs6": {
+            "textures": [
+                {
+                    "blockstate": "!with(HVKS_MAINB.NONE) && with(HVKS_ZS_OBEN_B.F_ZS6)",
+                    "y": 3.3
+                }
+            ]
+            
+        },
+        "hvks_tfleon/hvks/hvks_zs_form_oben": {
+            "textures": [
+                {
+                    "loadOFFstate": false,
+                    "blockstate": "!with(HVKS_MAINB.NONE) && with(HVKS_ZS_OBEN_B.F_ZS3)",
+                    "extentions": {
+						"zs3.json": {
+							"hvks_zs_oben_zs3_f": "zsschirm"
+						}
+					},
+                    "y": 3.3
+                }
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_zs_licht_oben": {
+            "textures": [
+                {
+                    "blockstate": "!with(HVKS_MAINB.NONE) && hasandisnot(HVKS_ZS8_AS_ZS1) && hasandis(HVKS_ZS8) && (with(HVKS_ZS_OBEN_B.L_ZS3_ZS6_8) || with(HVKS_ZS_OBEN_B.L_ZS2_ZS6_8) || with(HVKS_ZS_OBEN_B.L_ZS6_8))",
+                    "retexture": {
+                        "zsschirm": "zs8"
+                    },
+                    "y": 3.3
+                },
+                {
+                    "blockstate": "!with(HVKS_MAINB.NONE) && with(HVKS_ZS_OBEN_B.L_ZS3)",
+                    "extentions": {
+						"zs3.json": {
+							"hvks_zs_oben_zs3": "zsschirm"
+						}
+					},
+                    "y": 3.3
+                },
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && !with(HVKS_MAINB.NONE) && && with(HVKS_ZS_OBEN_B.L_ZS3_ZS6_8)",
+                    "extentions": {
+						"zs3_6.json": {
+							"hvks_zs_oben_zs3_6": "zsschirm"
+						}
+					},
+                    "y": 3.3
+                },
+                {
+                    "blockstate": "!with(HVKS_MAINB.NONE) && && with(HVKS_ZS_OBEN_B.L_ZS2)",
+                    "extentions": {
+						"zs2.json": {
+							"hvks_zs_oben_zs2": "zsschirm"
+						}
+					},
+                    "y": 3.3
+                },
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && !with(HVKS_MAINB.NONE) && && with(HVKS_ZS_OBEN_B.L_ZS2_ZS6_8)",
+                    "extentions": {
+						"zs2_6.json": {
+							"hvks_zs_oben_zs2_6": "zsschirm"
+						}
+					},
+                    "y": 3.3
+                },
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && !with(HVKS_MAINB.NONE) && && with(HVKS_ZS_OBEN_B.L_ZS6_8)",
+                    "extentions": {
+						"zs6.json": {
+							"hvks_zs_oben_zs6": "zsschirm"
+						}
+					},
+                    "y": 3.3
+                },
+                {
+                    "blockstate": "!with(HVKS_MAINB.NONE) && && with(HVKS_ZS_OBEN_B.L_ZP9_10)",
+                    "extentions": {
+						"zp9.json": {
+							"hvks_zs_oben_zp9": "zsschirm"
+						}
+					},
+                    "y": 3.3
+                }
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_zs_licht_oben_yellow": {
+            "textures": [
+                {
+                    "blockstate": "!with(HVKS_MAINB.NONE) && && with(HVKS_ZS_OBEN_B.L_ZS3V)",
+                    "extentions": {
+						"zs3.json": {
+							"hvks_zs_oben_zs3v": "zsschirm"
+						}
+					},
+                    "y": 3.3
+                },
+                {
+                    "blockstate": "!with(HVKS_MAINB.NONE) && && with(HVKS_ZS_OBEN_B.L_ZS2V)",
+                    "extentions": {
+						"zs2v.json": {
+							"hvks_zs_oben_zs2v": "zsschirm"
+						}
+					},
+                    "y": 3.3
+                }
+            ]
+        }, 
+
+        "hvks_tfleon/hvks/hvks_zs_form_unten": {
+            "textures": [
+                {
+                    "loadOFFstate": false,
+                    "blockstate": "with(HVKS_ZS_UNTEN_B.F_ZS3V)",
+                    "extentions": {
+						"zs3.json": {
+							"hvks_zs_unten_zs3v_f": "zsschirm"
+						}
+					},
+                    "y": 3.15,
+                    "x": -1,
+                    "z": 0.6
+                }
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_zs_form_unten_zs6": {
+            "textures": [
+                {
+                    "blockstate": "with(HVKS_ZS_UNTEN_B.F_ZS6)",
+                    "y": 3.15,
+                    "x": -1,
+                    "z": 0.6
+                }
+            ]
+            
+        },
+        "hvks_tfleon/hvks/hvks_zs_licht_1": {
+            "textures": [
+                {
+                    "blockstate": "hasandisnot(HVKS_ZS8_AS_ZS1) && hasandis(HVKS_ZS8) && (with(HVKS_ZS_UNTEN_B.L_ZS3_ZS6_8) || with(HVKS_ZS_UNTEN_B.L_ZS2_ZS6_8) || with(HVKS_ZS_UNTEN_B.L_ZS6_8))",
+                    "retexture": {
+                        "zsschirm": "zs8"
+                    },
+                    "y": 3.05,
+                    "x": -1,
+                    "z": 0.7
+                },
+                {
+                    "blockstate": "with(HVKS_ZS_UNTEN_B.L_ZS3)",
+                    "extentions": {
+						"zs3.json": {
+							"hvks_zs_unten_zs3": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1,
+                    "z": 0.7
+                },
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && with(HVKS_ZS_UNTEN_B.L_ZS3_ZS6_8)",
+                    "extentions": {
+						"zs3_6.json": {
+							"hvks_zs_unten_zs3_6": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1,
+                    "z": 0.7
+                },
+                {
+                    "blockstate": "with(HVKS_ZS_UNTEN_B.L_ZS2)",
+                    "extentions": {
+						"zs2.json": {
+							"hvks_zs_unten_zs2": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1,
+                    "z": 0.7
+                },
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && with(HVKS_ZS_UNTEN_B.L_ZS2_ZS6_8)",
+                    "extentions": {
+						"zs2_6.json": {
+							"hvks_zs_unten_zs2_6": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1,
+                    "z": 0.7
+                },
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && with(HVKS_ZS_UNTEN_B.L_ZS6_8)",
+                    "extentions": {
+						"zs6.json": {
+							"hvks_zs_unten_zs6": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1,
+                    "z": 0.7
+                },
+                {
+                    "blockstate": "with(HVKS_ZS_UNTEN_B.L_ZP9_10)",
+                    "extentions": {
+						"zp9.json": {
+							"hvks_zs_unten_zp9": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1,
+                    "z": 0.7
+                }
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_zs_licht_1_yellow": {
+            "textures": [
+                {
+                    "blockstate": "with(HVKS_ZS_UNTEN_B.L_ZS3V)",
+                    "extentions": {
+						"zs3.json": {
+							"hvks_zs_unten_zs3v": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1,
+                    "z": 0.7
+                },
+                {
+                    "blockstate": "with(HVKS_ZS_UNTEN_B.L_ZS2V)",
+                    "extentions": {
+						"zs2v.json": {
+							"hvks_zs_unten_zs2v": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1,
+                    "z": 0.7
+                }
+            ]
+        },
+
+        "hvks_tfleon/hvks/hvks_zs_licht_2": {
+            "textures": [
+                {
+                    "blockstate": "hasandisnot(HVKS_ZS8_AS_ZS1) && hasandis(HVKS_ZS8) && (with(HVKS_ZS_2_B.L_ZS3_ZS6_8) || with(HVKS_ZS_2_B.L_ZS2_ZS6_8) || with(HVKS_ZS_2_B.L_ZS6_8))",
+                    "retexture": {
+                        "zsschirm": "zs8"
+                    },
+                    "y": 3.05,
+                    "x": -1,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "with(HVKS_ZS_2_B.L_ZS3)",
+                    "extentions": {
+						"zs3.json": {
+							"hvks_zs_2_zs3": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1.7,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && with(HVKS_ZS_2_B.L_ZS3_ZS6_8)",
+                    "extentions": {
+						"zs3_6.json": {
+							"hvks_zs_2_zs3_6": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1.7,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "with(HVKS_ZS_2_B.L_ZS2)",
+                    "extentions": {
+						"zs2.json": {
+							"hvks_zs_2_zs2": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1.7,
+                    "z": 0.7
+                },
+
+
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && with(HVKS_ZS_2_B.L_ZS2_ZS6_8)",
+                    "extentions": {
+						"zs2_6.json": {
+							"hvks_zs_2_zs2_6": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1.7,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && with(HVKS_ZS_2_B.L_ZS6_8)",
+                    "extentions": {
+						"zs6.json": {
+							"hvks_zs_2_zs6": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1.7,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "with(HVKS_ZS_2_B.L_ZP9_10)",
+                    "extentions": {
+						"zp9.json": {
+							"hvks_zs_2_zp9": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1.7,
+                    "z": 0.7
+                }
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_zs_licht_2_yellow": {
+            "textures": [
+                {
+                    "blockstate": "with(HVKS_ZS_2_B.L_ZS2V)",
+                    "extentions": {
+						"zs2v.json": {
+							"hvks_zs_2_zs2v": "zsschirm"
+						}
+					},
+                    "y": 3,
+                    "x": -1.7,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "with(HVKS_ZS_2_B.L_ZS3V)",
+                    "extentions": {
+						"zs3.json": {
+							"hvks_zs_2_zs3v": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": -1.7,
+                    "z": 0.7
+                }
+            ]
+        },
+
+        "hvks_tfleon/hvks/hvks_zs_licht_3": {
+            "textures": [
+                {
+                    "blockstate": "hasandisnot(HVKS_ZS8_AS_ZS1) && hasandis(HVKS_ZS8) && with(HVKS_DISTANTB.NONE) && (with(HVKS_ZS_3_B.L_ZS3_ZS6_8) || with(HVKS_ZS_3_B.L_ZS2_ZS6_8) || with(HVKS_ZS_3_B.L_ZS6_8))",
+                    "retexture": {
+                        "zsschirm": "zs8"
+                    },
+                    "y": 3.05,
+                    "x": 1,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "with(HVKS_DISTANTB.NONE) && with(HVKS_ZS_3_B.L_ZS3)",
+                    "extentions": {
+						"zs3.json": {
+							"hvks_zs_3_zs3": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": 1,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && with(HVKS_DISTANTB.NONE) && with(HVKS_ZS_3_B.L_ZS3_ZS6_8)",
+                    "extentions": {
+						"zs3_6.json": {
+							"hvks_zs_3_zs3_6": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": 1,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "with(HVKS_DISTANTB.NONE) && with(HVKS_ZS_3_B.L_ZS2)",
+                    "extentions": {
+						"zs2.json": {
+							"hvks_zs_3_zs2": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": 1,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && with(HVKS_DISTANTB.NONE) && with(HVKS_ZS_3_B.L_ZS2_ZS6_8)",
+                    "extentions": {
+						"zs2_6.json": {
+							"hvks_zs_3_zs2_6": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": 1,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "(hasandisnot(HVKS_ZS8) || hasandis(HVKS_ZS8_AS_ZS1)) && with(HVKS_DISTANTB.NONE) && with(HVKS_ZS_3_B.L_ZS6_8)",
+                    "extentions": {
+						"zs6.json": {
+							"hvks_zs_3_zs6": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": 1,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "with(HVKS_DISTANTB.NONE) && with(HVKS_ZS_3_B.L_ZP9_10)",
+                    "extentions": {
+						"zp9.json": {
+							"hvks_zs_3_zp9": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": 1,
+                    "z": 0.7
+                }
+            ]
+        },
+        "hvks_tfleon/hvks/hvks_zs_licht_3_yellow": {
+            "textures": [
+                {
+                    "blockstate": "with(HVKS_DISTANTB.NONE) && with(HVKS_ZS_3_B.L_ZS2V)",
+                    "extentions": {
+						"zs2v.json": {
+							"hvks_zs_3_zs2v": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": 1,
+                    "z": 0.7
+                },
+
+                {
+                    "blockstate": "with(HVKS_DISTANTB.NONE) && with(HVKS_ZS_3_B.L_ZS3V)",
+                    "extentions": {
+						"zs3.json": {
+							"hvks_zs_3_zs3v": "zsschirm"
+						}
+					},
+                    "y": 3.05,
+                    "x": 1,
+                    "z": 0.7
+                }
+            ]
+        }
+    }
+}
