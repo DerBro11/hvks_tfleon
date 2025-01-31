@@ -1,0 +1,9 @@
+{
+    "extention": {
+        "OFF": "opensignals:blocks/hvks_tfleon/hvks_lamps/lamp_off",
+        "ZP9_K": "opensignals:blocks/hvks_tfleon/hvks_zs/zp9_c",
+        "ZP9_S": "opensignals:blocks/hvks_tfleon/hvks_zs/zp9_l",
+        "ZP10_T": "opensignals:blocks/hvks_tfleon/hvks_zs/zp10_t",
+        "ZP10_S": "opensignals:blocks/hvks_tfleon/hvks_zs/zp10_l"
+    }
+}
